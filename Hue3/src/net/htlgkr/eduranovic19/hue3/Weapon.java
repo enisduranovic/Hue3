@@ -52,4 +52,9 @@ public class Weapon {
         return value;
     }
 
+    @Override
+    public String toString() {
+        return name + " " + combatType + " " + damageType + " " + damage + " " + speed + " " + minStrength + " " + value;
+    }
+
 }

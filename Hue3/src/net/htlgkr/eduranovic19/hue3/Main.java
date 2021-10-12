@@ -37,12 +37,22 @@ public class Main {
 //
 //            }
 //        }
-        Printable p = (List<Weapon> weapon) -> {
+        Printable p1 = (List<Weapon> weapon) -> {
             for (int i = 0; i < weapon.size(); i++) {
                 System.out.println(weapon.get(i).toString());
             }
         };
-        p.print(list);
+        p1.print(list);
+
+        Printable p2 = (List<Weapon> weapon) -> {
+            for (int i = 0; i < weapon.size(); i++) {
+                System.out.println(" ------------------------------------------------------------");
+                System.out.println(" | " + weapon.get(i).getName() + " | " + weapon.get(i).getCombatType() + " | " + weapon.get(i).getDamageType() + " | " + weapon.get(i).getDamage() + " | " + weapon.get(i).getSpeed() + " | " + weapon.get(i).getMinStrength() + " | " + weapon.get(i).getValue() + " | ");
+            }
+            System.out.println(" ------------------------------------------------------------");
+        };
+        p2.print(list);
+
     }
 
 }
