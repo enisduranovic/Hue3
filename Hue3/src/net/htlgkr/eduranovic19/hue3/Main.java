@@ -32,6 +32,17 @@ public class Main {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
         list.sort((w1, w2) -> Integer.compare(w1.getDamage(), w2.getDamage()));
+//        list.sort((w1, w2) -> {
+//            if(CombatType(w1).) {
+//
+//            }
+//        }
+        Printable p = (List<Weapon> weapon) -> {
+            for (int i = 0; i < weapon.size(); i++) {
+                System.out.println(weapon.get(i).toString());
+            }
+        };
+        p.print(list);
     }
 
 }
